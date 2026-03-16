@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Add Blog</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+Title<br>
+<input type="text" name="title"><br><br>
+
+Description<br>
+<textarea name="description"></textarea><br><br>
+
+Image<br>
+<input type="file" name="image"><br><br>
+
+<button type="submit">Save Blog</button>
+
+</form>
+
+{% endblock %}

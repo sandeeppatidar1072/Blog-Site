@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Edit Product</h2>
+
+<form method="POST">
+
+Name<br>
+<input type="text" name="name" value="{{product.name}}"><br><br>
+
+Price<br>
+<input type="number" name="price" value="{{product.price}}"><br><br>
+
+Description<br>
+<textarea name="description">{{product.description}}</textarea><br><br>
+
+<button type="submit">Update Product</button>
+
+</form>
+
+{% endblock %}

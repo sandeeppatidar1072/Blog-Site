@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Your Cart</h2>
+
+{% for item in items %}
+
+<div style="border:1px solid #ccc; padding:15px; width:250px; margin-bottom:20px;">
+
+<img src="/{{item[3]}}" width="150">
+
+<h3>{{item[1]}}</h3>
+
+<p>Price : {{item[2]}}</p>
+
+<p>Quantity : {{item[3]}}</p>
+
+<a href="/remove-cart/{{item.id}}">Remove</a>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

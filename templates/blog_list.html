@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>All Blogs</h2>
+
+{% for blog in blogs %}
+
+<div class="card">
+
+<h3>{{blog.title}}</h3>
+
+<img src="{{blog.image}}" width="250">
+
+<p>{{blog.description[:100]}}...</p>
+
+<a href="/blog/{{blog.id}}">Read More</a>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

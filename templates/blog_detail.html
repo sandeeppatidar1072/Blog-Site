@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{blog.title}}</h2>
+
+<img src="{{blog.image}}" width="400">
+
+<p>{{blog.description}}</p>
+
+<a href="/blogs">Back</a>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Products</h2>
+
+<a href="/add-product">Add Product</a>
+
+<hr>
+
+{% for p in products %}
+
+<div class="card">
+
+<h3>{{p.name}}</h3>
+
+<img src="{{p.image}}" width="200">
+
+<p>Price : {{p.price}}</p>
+
+<p>{{p.description}}</p>
+
+<a href="/add-to-cart/{{p.id}}">Add to Cart</a>
+
+<a href="/edit-product/{{p.id}}">Edit</a>
+
+<a href="/delete-product/{{p.id}}">Delete</a>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
